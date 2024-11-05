@@ -5,11 +5,13 @@ export default class Holbertonclass {
     this._location = location;
   }
 
-  toString() {
-    return this._location;
-  }
-
-  valueof() {
+  [Symbol.toPrimitive](hint) {
+    if (hint === 'number') {
+      return this._size;
+    }
+    if (hint === 'string') {
+      return this._location;
+    }
     return this._size;
   }
 }
