@@ -9,5 +9,5 @@ export default function updateStudentGradeByCity(arr, city, newGrades) {
     }
   });
 
-  return studs;
+  return studs.map((item) => item);
 }
